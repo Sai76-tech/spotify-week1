@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> GDC web session</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <img src="./cityImage.jpg" class="img" alt="Background image">
+        <div class="wrapper">
+            <h1 class="name">SAINATH SHERUGAR</h1>
+            <p>SE EXTC</p>
+        </div>
+        <div class="button-wrapper">
+            <button>SWITCH SUBTITLE</button>
+            <button class="branch-img">SWITCH IMAGE</button>
+        </div>
+    </body> 
+    <script>
+        document.querySelector('.branch-img').addEventListener('click', () => {
+            const image = document.querySelector('.img')
+            const name = document.querySelector('.name')
+
+            setTimeout(() => {
+                const currentSrc = image.src.split('/').pop(
+                    
+                )
+                if(currentSrc === 'cityImage.jpg'){
+                    image.src = './glacier-523785064.jpg'
+                } else {
+                    image.src = './cityImage.jpg   '
+                }
+            })
+        })
+    </script>
+</html>
